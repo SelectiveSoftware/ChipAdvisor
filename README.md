@@ -6,7 +6,7 @@ Chip Advisor - the place to advise you on chips.
 
 To build to your local docker daemon run the following:
 ```
-mvn compile jib:dockerBuild
+mvn clean package
 ```
 To run in a docker container:
 ```
