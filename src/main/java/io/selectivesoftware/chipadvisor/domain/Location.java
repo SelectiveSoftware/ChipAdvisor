@@ -1,8 +1,20 @@
 package io.selectivesoftware.chipadvisor.domain;
 
-public interface Location {
-    double getLat();
-    double getLon();
-    void setLat(double lat);
-    void setLon(double lon);
+import lombok.Builder;
+import lombok.Data;
+
+import java.time.OffsetDateTime;
+import java.util.UUID;
+
+@Builder
+@Data
+public class Location {
+    private UUID id;
+    private String name;
+    private double lat;
+    private double lng;
+    private String description;
+    private String url;
+    private OffsetDateTime created_at;
+    private OffsetDateTime updated_at;
 }
