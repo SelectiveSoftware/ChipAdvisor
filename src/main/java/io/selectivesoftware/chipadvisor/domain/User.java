@@ -4,19 +4,15 @@ import lombok.Builder;
 import lombok.Data;
 
 import javax.persistence.Entity;
-import javax.persistence.Id;
+import java.net.InetAddress;
 import java.time.OffsetDateTime;
 
 @Builder
 @Data
 @Entity
-public class Location {
-  @Id private String locationId;
-  private String name;
-  private double lat;
-  private double lng;
-  private String description;
-  private String url;
+public class User {
+  private String userId;
+  private InetAddress ip;
   private OffsetDateTime created_at;
   private OffsetDateTime updated_at;
 }
